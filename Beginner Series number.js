@@ -10,7 +10,7 @@ GetSum(1, 1) == 1   // 1 Since both are same
 GetSum(-1, 0) == -1 // -1 + 0 = -1
 GetSum(-1, 2) == 2  // -1 + 0 + 1 + 2 = 2 */
 
-const GetSum = ( a, b ) => {
+const GetSum = (a, b) => {
   let result = 0;
   if (a === b) {
     return a;
@@ -26,4 +26,3 @@ const GetSum = ( a, b ) => {
   }
   return result;
 };
-
