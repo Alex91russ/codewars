@@ -14,13 +14,18 @@ If the carpet catches fire, return 'Fire!', if not, return 'That was close!'.
 */
 
 const calculateSum = y => {
-    return y.split('').reduce((acc, value) => acc + value.codePointAt(0), 0)
-  }
+  return y.split('').reduce((acc, value, i) => {
+    if (i % 2 === 0) {
+      return acc + value.codePointAt(0);
+    }
+    return acc + (value.codePointAt(0) - 96);
+  }, 0)
+}
 
 const cake = (x, y) => {
-  
-  const sum = calculateSum(y);
-  const result = sum / x;
-  
-  return result > 0.7 ? 'Fire!' : 'That was close!';
+
+const sum = calculateSum(y);
+const result = sum / x;
+
+return result > 0.7 ? 'Fire!' : 'That was close!';
 }
