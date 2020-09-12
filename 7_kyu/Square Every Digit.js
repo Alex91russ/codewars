@@ -16,4 +16,5 @@ function squareDigits(num){
   return result;
 }
 
-console.log(squareDigits(9414));
+
+const squareDigits = num => +num.toString().split('').map(value => value * value).join('')
